@@ -1,0 +1,321 @@
+
+@media (max-width: 480px) {
+    .header-row button {
+        font-size: 0.78rem;
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #model-selector-btn {
+        padding: 9px 12px;
+        font-size: 0.82rem;
+    }
+    #model-selector-btn .model-purpose {
+        font-size: 0.72rem;
+    }
+    #model-dropdown-list {
+        max-height: 240px;
+    }
+    #select-toolbar {
+        flex-wrap: wrap;
+        padding: 0 6px 10px;
+    }
+    #select-toolbar button {
+        padding: 6px 10px;
+        font-size: 0.74rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #model-selector-btn .model-purpose {
+        display: none;
+    }
+    .model-option .m-purpose {
+        display: block;
+    }
+    #context-menu {
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 360px) {
+    #model-selector-btn {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    #model-selector-btn .model-icon-badge {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1440px) {
+    #sidebar { width: 300px; }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+    #sidebar { width: 240px; }
+}
+
+@media (max-width: 1023px) {
+    #sidebar {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        padding: 20px 12px;
+        align-items: flex-start;
+    }
+
+    .container{
+        max-width: 100%;
+        gap: 14px;
+    }
+
+    .header{
+        padding: 2px 2px 4px;
+    }
+
+    .title-box h1{
+        font-size: 1.25rem;
+    }
+
+    .subtitle{
+        font-size: 0.78rem;
+    }
+
+    .chat-box{
+        border-radius: var(--radius-md);
+        padding: 6px;
+    }
+
+    #chat{
+        height: 58vh;
+        min-height: 320px;
+        padding: 16px;
+        gap: 10px;
+    }
+
+    #chat > div,
+    #chat > p{
+        max-width: 88%;
+        font-size: 0.9rem;
+    }
+
+    .input-row{
+        padding: 6px;
+    }
+
+    #message{
+        font-size: 16px;
+        padding: 10px 8px;
+    }
+
+    button{
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 480px){
+    .logo{
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo-dot{
+        width: 16px;
+        height: 16px;
+    }
+
+    .title-box h1{
+        font-size: 1.1rem;
+    }
+
+    .status{
+        padding: 5px 8px;
+    }
+
+    .status span:not(.dot){
+        display: none;
+    }
+
+    #chat{
+        height: 56vh;
+        padding: 14px;
+    }
+
+    #chat > div,
+    #chat > p{
+        max-width: 92%;
+        font-size: 0.88rem;
+        padding: 9px 12px;
+    }
+
+    button span{
+        display: none;
+    }
+
+    button{
+        padding: 10px 14px;
+    }
+
+    .footnote{
+        font-size: 0.68rem;
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 360px){
+    body{
+        padding: 14px 8px;
+    }
+
+    .header{
+        gap: 10px;
+    }
+
+    .title-box h1{
+        font-size: 1rem;
+    }
+
+    .subtitle{
+        display: none;
+    }
+
+    #chat{
+        height: 54vh;
+        padding: 12px;
+    }
+
+    .empty-icon{
+        font-size: 1.2rem;
+    }
+
+    .empty-title{
+        font-size: 0.88rem;
+    }
+
+    .empty-text{
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-height: 480px) and (orientation: landscape){
+    body{
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .header{
+        padding: 0;
+    }
+
+    #chat{
+        height: 46vh;
+        min-height: 180px;
+    }
+
+    .footnote{
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px){
+    .container{
+        max-width: 620px;
+    }
+
+    #chat{
+        height: 50vh;
+        min-height: 380px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px){
+    .container{
+        max-width: 680px;
+    }
+
+    #chat{
+        height: 440px;
+    }
+}
+
+@media (min-width: 1600px){
+    .container{
+        max-width: 760px;
+        gap: 22px;
+    }
+
+    .title-box h1{
+        font-size: 1.6rem;
+    }
+
+    .subtitle{
+        font-size: 0.88rem;
+    }
+
+    #chat{
+        height: 480px;
+        padding: 24px;
+    }
+
+    #chat > div,
+    #chat > p{
+        font-size: 0.98rem;
+        padding: 12px 16px;
+    }
+
+    #message{
+        font-size: 1rem;
+        padding: 12px 14px;
+    }
+
+    button{
+        font-size: 0.95rem;
+        padding: 12px 22px;
+    }
+}
+
+@media (min-width: 2200px){
+    .container{
+        max-width: 900px;
+    }
+
+    body{
+        font-size: 1.05rem;
+    }
+
+    #chat{
+        height: 560px;
+    }
+
+    .glow1, .glow2{
+        filter: blur(180px);
+    }
+}
+
+@media (max-width: 300px){
+    .title-box h1{
+        font-size: 0.95rem;
+    }
+
+    .status{
+        display: none;
+    }
+
+    button span{
+        display: none;
+    }
+}
+
+@media (hover: none){
+    button:hover{
+        filter: none;
+        box-shadow: none;
+    }
+}
