@@ -1,0 +1,39 @@
+:root{
+    --bg:            #0B0D12;
+    --panel:         #12151C;
+    --panel-raised:  #171B24;
+    --border:        #232732;
+    --text:          #EDEFF5;
+    --muted:         #8A8F9E;
+    --accent-a:      #7C5CFF;
+    --accent-b:      #22D3EE;
+    --accent-grad:   linear-gradient(135deg, var(--accent-a), var(--accent-b));
+    --user-bubble:   #232042;
+    --bot-bubble:    #161A22;
+    --radius-lg:     20px;
+    --radius-md:     14px;
+    --radius-sm:     10px;
+    --shadow-soft:   0 20px 60px -20px rgba(0,0,0,0.6);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    position: relative;
+    overflow-x: hidden;
+}
