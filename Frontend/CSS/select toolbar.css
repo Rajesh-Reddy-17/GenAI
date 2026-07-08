@@ -1,0 +1,99 @@
+#select-toolbar {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 12px;
+    gap: 8px;
+}
+
+#select-toolbar.visible {
+    display: flex;
+}
+
+#select-toolbar label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+#select-toolbar .toolbar-actions {
+    display: flex;
+    gap: 8px;
+}
+
+#select-toolbar button {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    border-radius: var(--radius-sm);
+}
+
+#select-toolbar .delete-btn {
+    background: #FF4A4A;
+    color: #fff;
+}
+
+#select-toolbar .cancel-btn {
+    background: var(--panel-raised);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chat-item .title,
+.chat-item .date {
+    flex: 1;
+}
+
+#confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(3px);
+    z-index: 19999;
+    animation: rise 0.2s ease;
+}
+
+
+#sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 90; 
+}
+
+#sidebar-backdrop.visible {
+    display: block;
+}
+
+.header-row {
+    display: flex;
+    gap: 8px;
+}
+
+.header-row button {
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 0.85rem;
+}
+
+#select-toggle-btn {
+    background: var(--panel-raised) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+}
+
+#select-toggle-btn.active {
+    background: var(--accent-grad) !important;
+    color: #0B0D12 !important;
+    border: none !important;
+}
