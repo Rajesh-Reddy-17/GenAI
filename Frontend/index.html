@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
+    </div>
+
+    <div class="container">
+
+        <header class="header">
+            <div class="logo">
+                <span class="logo-dot"></span>
+            </div>
+
+            <button id="sidebar-toggle" onclick="toggleSidebar()" aria-label="Toggle Sidebar"
+                style="background:transparent; color:var(--text); padding:8px; box-shadow:none; width:auto; height:auto;">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="title-box">
+                <h1>GenAI</h1>
+                <p class="subtitle">Ask anything , Get answer instantly.</p>
+            </div>
+            <span class="status"><span class="dot"></span>Online</span>
+        </header>
+
+        <main class="chat-box">
+            <div id="chat">
+                <div class="empty">
+                    <div class="empty-icon">✦</div>
+                    <p class="empty-title">Nothing here yet</p>
+                    <p class="empty-text">Type any question below to start the conversation.</p>
+                </div>
+            </div>
+
+            <div id="attachment-preview" class="hidden"></div>
+
+            <div class="input-row" id="input-row">
+                <button id="attach-btn" type="button" aria-label="Attach file" onclick="triggerFileInput()">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <input type="file" id="file-input" hidden multiple
+                    accept="image/*,.pdf,.doc,.docx,.ppt,.pptx" onchange="handleFileSelect(event)">
+
+                <textarea id="message" placeholder="Ask anything…" autocomplete="off" rows="1"></textarea>
+
+                <button id="mic-btn" type="button" aria-label="Voice input" onclick="toggleVoiceInput()">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                </button>
+
+                <button id="send-btn" onclick="handleSendClick()" aria-label="Send message">
+                    <svg id="send-icon" viewBox="0 0 24 24" width="15" height="15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.4 20.4L21 12 3.4 3.6 3 10l12 2-12 2z" fill="currentColor" />
+                    </svg>
+                    <svg id="stop-icon" class="hidden" viewBox="0 0 24 24" width="13" height="13">
+                        <rect x="4" y="4" width="16" height="16" rx="3" fill="currentColor"></rect>
+                    </svg>
+                </button>
+            </div>
+        </main>
+
+        <p class="footnote">GenAI can make mistakes. Verify important information.</p>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
