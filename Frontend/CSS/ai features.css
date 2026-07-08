@@ -1,0 +1,129 @@
+
+#model-selector-wrapper {
+    width: auto;
+    flex-shrink: 0;
+    border-left: 1px solid var(--border);
+    margin: 0 2px;
+    padding-left: 8px;
+}
+
+#model-selector-btn {
+    width: auto;
+    background: transparent;
+    border: none;
+    padding: 6px 6px;
+}
+
+#model-selector-btn:hover {
+    border-color: transparent;
+}
+
+#model-selector-btn .model-purpose {
+    display: none; 
+}
+
+#model-dropdown-list {
+    left: auto;
+    right: 0;
+    width: 270px;
+}
+
+.model-option.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.model-option.disabled:hover {
+    background: transparent;
+}
+
+.model-option.disabled .m-purpose {
+    color: #FF6A6A;
+}
+
+.model-unavailable-note {
+    margin-top: 4px;
+    padding: 8px 10px;
+    font-size: 0.76rem;
+    color: #FF6A6A;
+    background: rgba(255, 74, 74, 0.08);
+    border: 1px solid rgba(255, 74, 74, 0.25);
+    border-radius: var(--radius-sm);
+    animation: rise 0.2s ease;
+}
+
+
+#attachment-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 6px;
+}
+
+#attachment-preview.hidden {
+    display: none;
+}
+
+.attachment-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--panel-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 5px 10px 5px 5px;
+    font-size: 0.78rem;
+    color: var(--text);
+    animation: rise 0.2s ease;
+}
+
+.attachment-chip img {
+    width: 26px;
+    height: 26px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.attachment-chip .chip-icon {
+    font-size: 1rem;
+}
+
+.attachment-chip .remove-chip {
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 2px;
+}
+
+.attachment-chip .remove-chip:hover {
+    color: #FF4A4A;
+}
+
+.typing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 0;
+}
+
+.typing-indicator span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--muted);
+    animation: typingBounce 1.2s ease-in-out infinite;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.15s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes typingBounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+    30% { transform: translateY(-4px); opacity: 1; }
+}
+
+.stopped-tag {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-style: italic;
+}
