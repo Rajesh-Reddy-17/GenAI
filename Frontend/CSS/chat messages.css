@@ -1,0 +1,25 @@
+#chat > div,
+#chat > p{
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    background: var(--bot-bubble);
+    border: 1px solid var(--border);
+    align-self: flex-start;
+    animation: rise 0.25s ease;
+}
+
+#chat > div.user,
+#chat > div.user-msg,
+#chat > .user{
+    background: var(--user-bubble);
+    border-color: #322D57;
+    align-self: flex-end;
+}
+
+@keyframes rise{
+    from{ opacity: 0; transform: translateY(6px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
